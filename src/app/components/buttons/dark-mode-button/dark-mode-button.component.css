@@ -1,13 +1,37 @@
 button {
-    background-color: #343a40;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #23272b;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333; /* Oscuro */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 10px;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+
+  /* dark-mode-button.component.css */
+:host {
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+:host-context(.dark-mode) {
+  color: white; /* Color de texto en modo oscuro */
+}
+
+:host-context(.light-mode) {
+  background-color: #fff; /* Color para modo claro */
+  color: black; /* Color de texto en modo claro */
+}

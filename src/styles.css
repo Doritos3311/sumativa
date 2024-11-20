@@ -1,6 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
-/* styles.css */
+
 body.dark-mode {
     background-color: #121212; /* Color de fondo oscuro */
     color: #ffffff; /* Color de texto claro */
   }
+
+button {
+  background-color: #007bff; /* Color único para todos los botones */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Color al pasar el mouse */
+}

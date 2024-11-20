@@ -1,14 +1,3 @@
-/* Variables para colores pastel */
-:root {
-  --primary-color: #6c63ff;
-  --secondary-color: #ffd369;
-  --accept-color: #6ee7b7;
-  --cancel-color: #f87171;
-  --background-color: #f3f4f6;
-  --text-color: #333;
-  --input-bg: #ffffff;
-  --hover-opacity: 0.9;
-}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -65,21 +54,58 @@ button:hover {
   opacity: var(--hover-opacity);
 }
 
-/* Estilos personalizados para tipos de botones */
-button.primary {
-  background-color: var(--primary-color);
+/* Contenedor principal de los botones */
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-button.secondary {
-  background-color: var(--secondary-color);
+/* Contenedor de los botones a la izquierda */
+.button-left,
+.button-right {
+  display: flex;
+  flex-direction: column; /* Apila los botones verticalmente */
+  gap: 20px; /* Espacio entre los botones */
 }
 
-button.accept {
-  background-color: var(--accept-color);
+/* Estilo para los botones individuales */
+app-primary-button,
+app-secondary-button,
+app-accept-button,
+app-cancel-button,
+app-dark-mode-button {
+  margin: 0;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-button.cancel {
-  background-color: var(--cancel-color);
+/* Efecto hover */
+app-primary-button:hover,
+app-secondary-button:hover,
+app-accept-button:hover,
+app-cancel-button:hover,
+app-dark-mode-button:hover {
+  transform: scale(1.05);
+}
+
+/* Modificaciones para el modo oscuro */
+body.dark-mode app-primary-button,
+body.dark-mode app-secondary-button,
+body.dark-mode app-accept-button,
+body.dark-mode app-cancel-button,
+body.dark-mode app-dark-mode-button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
 }
 
 /* Entradas */

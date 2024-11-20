@@ -13,30 +13,31 @@
       <app-text-input (textChange)="onTextChange($event)"></app-text-input>
     </div>
   
+    <h2>Botones</h2>
     <div class="button-section">
-      <h2>Botones</h2>
-      <button class="primary" (click)="onButtonClick('primary')">
-        <i class="fas fa-play"></i> Primary
-      </button>
-      <button class="secondary" (click)="onButtonClick('secondary')">
-        <i class="fas fa-edit"></i> Secondary
-      </button>
-      <button class="accept" (click)="onButtonClick('accept')">
-        <i class="fas fa-check-circle"></i> Accept
-      </button>
-      <button class="cancel" (click)="onButtonClick('cancel')">
-        <i class="fas fa-times-circle"></i> Cancel
-      </button>
-      <button class="dark-mode" (click)="toggleDarkMode()">
-        <i class="fas fa-moon"></i> Toggle Dark Mode
-      </button>
+      <!-- Contenedor de botones a la izquierda (apilados) -->
+      <div class="button-left">
+        <app-primary-button (buttonClicked)="onButtonClick('primary')"></app-primary-button>
+        <app-secondary-button (buttonClicked)="onButtonClick('secondary')"></app-secondary-button>
+      </div>
+    
+      <!-- Contenedor del botón de modo oscuro (centrado) -->
+      <app-dark-mode-button (modeChanged)="toggleDarkMode()"></app-dark-mode-button>
+    
+      <!-- Contenedor de botones a la derecha (apilados) -->
+      <div class="button-right">
+        <app-accept-button (buttonClicked)="onButtonClick('accept')"></app-accept-button>
+        <app-cancel-button (buttonClicked)="onButtonClick('cancel')"></app-cancel-button>
+      </div>
     </div>
+    
   
     <div class="viewer-section">
       <h2>Datos Ingresados</h2>
       <app-viewer [password]="password" [email]="email" [text]="text"></app-viewer>
     </div>
   </div>
+  
   
 </body>
 

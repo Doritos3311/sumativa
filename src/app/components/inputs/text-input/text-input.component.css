@@ -1,11 +1,17 @@
+/* Estilo básico para los inputs */
 input {
-    margin: 8px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  input:focus {
-    border-color: #007bff;
-  }
+  width: 100%; /* Los inputs ocuparán todo el ancho disponible */
+  padding: 10px; /* Espaciado dentro del input */
+  font-size: 16px; /* Tamaño de la fuente */
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris claro */
+  margin-bottom: 15px; /* Margen abajo para separarlos */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+
+/* Estilo para el modo oscuro */
+body.dark-mode input {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  border: 1px solid #444; /* Borde ligeramente más oscuro */
+}
