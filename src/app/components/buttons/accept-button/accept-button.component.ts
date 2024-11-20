@@ -1,12 +1,12 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-primary-button',
+  selector: 'app-accept-button',
   standalone: true,
-  template: `<button (click)="handleClick()">Botón Primario</button>`,
-  styles: [`button { background-color: blue; color: white; }`]
+  template: './accept-button.component.html',
+  styles: ['./accept-button.component.css']
 })
-export class PrimaryButtonComponent {
+export class AcceptButtonComponent {
   @Output() buttonClicked = new EventEmitter<void>();
 
   handleClick() {

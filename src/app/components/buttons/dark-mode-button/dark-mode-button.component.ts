@@ -3,8 +3,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-dark-mode-button',
   standalone: true,
-  template: `<button (click)="toggleMode()">Modo Oscuro</button>`,
-  styles: [`button { background-color: black; color: white; }`]
+  imports: [],
+  templateUrl: './dark-mode-button.component.html',
+  styleUrl: './dark-mode-button.component.css'
 })
 export class DarkModeButtonComponent {
   @Output() modeChanged = new EventEmitter<void>();
