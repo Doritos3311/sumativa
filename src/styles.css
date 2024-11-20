@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/* styles.css */
+body.dark-mode {
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto claro */
+  }

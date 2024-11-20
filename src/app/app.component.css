@@ -1,34 +1,112 @@
+/* Variables para colores pastel */
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #ffd369;
+  --accept-color: #6ee7b7;
+  --cancel-color: #f87171;
+  --background-color: #f3f4f6;
+  --text-color: #333;
+  --input-bg: #ffffff;
+  --hover-opacity: 0.9;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-h1 {
-  color: #333;
+/* Contenedor principal */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: var(--input-bg);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 20px;
   text-align: center;
-  margin-top: 20px;
 }
 
+/* Títulos */
+h1, h2 {
+  color: var(--text-color);
+  margin: 0 0 15px 0;
+}
+
+/* Botones */
 button {
-  background-color: #4285f4; /* Color de Google */
+  background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 20px; /* Bordes redondeados */
-  padding: 10px 20px;
+  border-radius: 32px; /* Más redondeados */
+  padding: 14px 24px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 12px; /* Separación */
 }
 
 button:hover {
-  background-color: #357ae8; /* Color más oscuro al pasar el ratón */
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  opacity: var(--hover-opacity);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+/* Estilos personalizados para tipos de botones */
+button.primary {
+  background-color: var(--primary-color);
+}
+
+button.secondary {
+  background-color: var(--secondary-color);
+}
+
+button.accept {
+  background-color: var(--accept-color);
+}
+
+button.cancel {
+  background-color: var(--cancel-color);
+}
+
+/* Entradas */
+input {
+  width: 100%;
+  padding: 12px 18px;
+  border: 2px solid var(--primary-color);
+  border-radius: 16px;
+  font-size: 16px;
+  background-color: var(--input-bg);
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
 }

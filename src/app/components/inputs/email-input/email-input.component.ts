@@ -1,17 +1,24 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Importa CommonModule
+
 
 @Component({
   selector: 'app-email-input',
   standalone: true,
-  imports: [],
+  imports: [CommonModule], // Agrega CommonModule aquí
   templateUrl: './email-input.component.html',
-  styleUrl: './email-input.component.css'
+  styleUrls: ['./email-input.component.css']
 })
 export class EmailInputComponent {
   @Output() emailChange = new EventEmitter<string>();
+  isInvalid = false;
 
   onInput(event: Event) {
-    const input = event.target as HTMLInputElement; // Asegúrate de que el tipo sea HTMLInputElement
-    this.emailChange.emit(input.value); // Emitir el valor del input
+    const input = event.target as HTMLInputElement;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    this.isInvalid = !emailPattern.test(input.value);
+    if (!this.isInvalid) {
+      this.emailChange.emit(input.value);
+    }
   }
 }

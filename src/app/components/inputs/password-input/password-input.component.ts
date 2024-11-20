@@ -1,17 +1,22 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Importa CommonModule
 
 @Component({
   selector: 'app-password-input',
   standalone: true,
-  imports: [],
+  imports: [CommonModule], // Agrega CommonModule aquí
   templateUrl: './password-input.component.html',
-  styleUrl: './password-input.component.css'
+  styleUrls: ['./password-input.component.css']
 })
 export class PasswordInputComponent {
   @Output() passwordChange = new EventEmitter<string>();
+  isInvalid = false;
 
   onInput(event: Event) {
-    const input = event.target as HTMLInputElement; // Asegúrate de que el tipo sea HTMLInputElement
-    this.passwordChange.emit(input.value); // Emitir el valor del input
+    const input = event.target as HTMLInputElement;
+    this.isInvalid = input.value.length < 6;
+    if (!this.isInvalid) {
+      this.passwordChange.emit(input.value);
+    }
   }
 }

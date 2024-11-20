@@ -8,7 +8,7 @@ import { DarkModeButtonComponent } from './components/buttons/dark-mode-button/d
 import { PasswordInputComponent } from './components/inputs/password-input/password-input.component';
 import { EmailInputComponent } from './components/inputs/email-input/email-input.component';
 import { TextInputComponent } from './components/inputs/text-input/text-input.component';
-import { ViewerComponent } from './components/viewer/viewer.component';
+import { ViewerComponent } from './components/viewer/viewer/viewer.component';
 
 @Component({
   selector: 'app-root',
@@ -25,20 +25,7 @@ import { ViewerComponent } from './components/viewer/viewer.component';
     TextInputComponent,
     ViewerComponent,
   ],
-  template: `
-    <h1>Galería de Componentes</h1>
-    <app-password-input (passwordChange)="onPasswordChange($event)"></app-password-input>
-    <app-email-input (emailChange)="onEmailChange($event)"></app-email-input>
-    <app-text-input (textChange)="onTextChange($event)"></app-text-input>
-
-    <app-primary-button (buttonClicked)="onButtonClick('primary')"></app-primary-button>
-    <app-secondary-button (buttonClicked)="onButtonClick('secondary')"></app-secondary-button>
-    <app-accept-button (buttonClicked)="onButtonClick('accept')"></app-accept-button>
-    <app-cancel-button (buttonClicked)="onButtonClick('cancel')"></app-cancel-button>
-    <app-dark-mode-button (modeChanged)="toggleDarkMode()"></app-dark-mode-button>
-
-    <app-viewer [password]="password" [email]="email" [text]="text"></app-viewer>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -46,6 +33,7 @@ export class AppComponent {
   password: string = '';
   email: string = '';
   text: string = '';
+  isDarkMode: boolean = false; // Variable para controlar el modo oscuro
 
   onPasswordChange(value: string) {
     this.password = value;
@@ -64,6 +52,13 @@ export class AppComponent {
   }
 
   toggleDarkMode() {
-    console.log("Modo oscuro activado!");
+    this.isDarkMode = !this.isDarkMode; // Cambia el estado del modo oscuro
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode'); // Agrega clase al body
+      console.log("Modo oscuro activado!");
+    } else {
+      document.body.classList.remove('dark-mode'); // Remueve clase del body
+      console.log("Modo oscuro desactivado!");
+    }
   }
 }
