@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Importar FormsModule para usar ngModel
-import { PrimaryButtonComponent } from './components/buttons/primary-button.component';
-import { SecondaryButtonComponent } from './components/buttons/secondary-button.component';
+import { PrimaryButtonComponent } from './components/buttons/primary-button/primary-button.component';
+import { SecondaryButtonComponent } from './components/buttons/secondary-button/secondary-button.component';
 import { AcceptButtonComponent } from './components/buttons/accept-button/accept-button.component';
 import { CancelButtonComponent } from './components/buttons/cancel-button/cancel-button.component';
-import { DarkModeButtonComponent } from './components/buttons/dark-mode-button.component';
+import { DarkModeButtonComponent } from './components/buttons/dark-mode-button/dark-mode-button.component';
 import { PasswordInputComponent } from './components/inputs/password-input.component';
 import { EmailInputComponent } from './components/inputs/email-input.component';
 import { TextInputComponent } from './components/inputs/text-input.component';

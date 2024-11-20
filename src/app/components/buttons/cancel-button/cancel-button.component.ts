@@ -3,8 +3,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-cancel-button',
   standalone: true,
-  template: `<button (click)="handleClick()">Cancelar</button>`,
-  styles: [`button { background-color: red; color: white; }`]
+  imports: [],
+  templateUrl: './cancel-button.component.html',
+  styleUrl: './cancel-button.component.css'
 })
 export class CancelButtonComponent {
   @Output() buttonClicked = new EventEmitter<void>();
