@@ -3,10 +3,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-text-input',
   standalone: true,
-  template: `
-    <input type="text" (input)="onInput($event)" placeholder="Ingrese su texto">
-  `,
-  styles: [`input { margin: 8px 0; }`]
+  imports: [],
+  templateUrl: './text-input.component.html',
+  styleUrl: './text-input.component.css'
 })
 export class TextInputComponent {
   @Output() textChange = new EventEmitter<string>();

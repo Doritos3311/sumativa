@@ -1,0 +1,2 @@
+<input type="password" (input)="onInput($event)" placeholder="Ingrese su contraseña" required>
+<div *ngIf="isInvalid" style="color: red;">La contraseña debe tener al menos 6 caracteres.</div>

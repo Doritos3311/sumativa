@@ -3,10 +3,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-email-input',
   standalone: true,
-  template: `
-    <input type="email" (input)="onInput($event)" placeholder="Ingrese su email">
-  `,
-  styles: [`input { margin: 8px 0; }`]
+  imports: [],
+  templateUrl: './email-input.component.html',
+  styleUrl: './email-input.component.css'
 })
 export class EmailInputComponent {
   @Output() emailChange = new EventEmitter<string>();

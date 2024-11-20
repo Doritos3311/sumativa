@@ -5,9 +5,9 @@ import { SecondaryButtonComponent } from './components/buttons/secondary-button/
 import { AcceptButtonComponent } from './components/buttons/accept-button/accept-button.component';
 import { CancelButtonComponent } from './components/buttons/cancel-button/cancel-button.component';
 import { DarkModeButtonComponent } from './components/buttons/dark-mode-button/dark-mode-button.component';
-import { PasswordInputComponent } from './components/inputs/password-input.component';
-import { EmailInputComponent } from './components/inputs/email-input.component';
-import { TextInputComponent } from './components/inputs/text-input.component';
+import { PasswordInputComponent } from './components/inputs/password-input/password-input.component';
+import { EmailInputComponent } from './components/inputs/email-input/email-input.component';
+import { TextInputComponent } from './components/inputs/text-input/text-input.component';
 import { ViewerComponent } from './components/viewer/viewer.component';
 
 @Component({

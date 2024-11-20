@@ -3,10 +3,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-password-input',
   standalone: true,
-  template: `
-    <input type="password" (input)="onInput($event)" placeholder="Ingrese su contraseña">
-  `,
-  styles: [`input { margin: 8px 0; }`]
+  imports: [],
+  templateUrl: './password-input.component.html',
+  styleUrl: './password-input.component.css'
 })
 export class PasswordInputComponent {
   @Output() passwordChange = new EventEmitter<string>();
