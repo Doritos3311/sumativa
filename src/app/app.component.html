@@ -13,12 +13,15 @@
       <app-text-input (textChange)="onTextChange($event)"></app-text-input>
     </div>
   
+    <!-- src/app/app.component.html -->
+    <app-square [color]="squareColor" [isCircle]="isCircle" [position]="squarePosition"></app-square>
+
     <h2>Botones</h2>
     <div class="button-section">
       <!-- Contenedor de botones a la izquierda (apilados) -->
       <div class="button-left">
-        <app-primary-button (buttonClicked)="onButtonClick('primary')"></app-primary-button>
-        <app-secondary-button (buttonClicked)="onButtonClick('secondary')"></app-secondary-button>
+        <app-primary-button (buttonClicked)="onPrimaryButtonClick()"></app-primary-button>
+        <app-secondary-button (buttonClicked)="onSecondaryButtonClick()"></app-secondary-button>
       </div>
     
       <!-- Contenedor del botón de modo oscuro (centrado) -->
@@ -26,15 +29,18 @@
     
       <!-- Contenedor de botones a la derecha (apilados) -->
       <div class="button-right">
-        <app-accept-button (buttonClicked)="onButtonClick('accept')"></app-accept-button>
-        <app-cancel-button (buttonClicked)="onButtonClick('cancel')"></app-cancel-button>
+        
+        <app-accept-button (buttonClicked)="moveAndResetSquare()"></app-accept-button>
+        <app-cancel-button (buttonClicked)="toggleShape()"></app-cancel-button>
       </div>
     </div>
+    
     
   
     <div class="viewer-section">
       <h2>Datos Ingresados</h2>
       <app-viewer [password]="password" [email]="email" [text]="text"></app-viewer>
+      
     </div>
   </div>
   

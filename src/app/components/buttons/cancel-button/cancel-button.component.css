@@ -1,18 +1,34 @@
-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ea4335; /* Rojo Google */
+button{
+  background-color: #f44336; /* Rojo para cancelar */
   color: white;
   border: none;
   border-radius: 25px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Espacio entre el icono y el texto */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #d93425;
+  background-color: #f44336; /* Verde más oscuro al pasar el cursor */
+  transform: scale(1.05); /* Ligeramente más grande al pasar el cursor */
+}
+
+.shape {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  transition: border-radius 0.5s ease; /* Transición suave */
+}
+
+.square {
+  border-radius: 0; /* Cuadrado */
+}
+
+.circle {
+  border-radius: 50%; /* Círculo */
 }

@@ -1,0 +1,35 @@
+/* src/app/components/square/square.component.css */
+.square {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px; /* Bordes redondeados */
+    border: 2px solid #444; /* Borde más suave */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Transición suave para cualquier cambio */
+  }
+  
+  /* Efecto de hover para el cuadrado, cuando se pasa el mouse */
+  .square:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al pasar el mouse */
+    cursor: pointer; /* Cursor de mano */
+  }
+  
+  /* Si prefieres un degradado de color, puedes usar este estilo */
+  .square {
+    background: linear-gradient(45deg, rgba(255, 107, 107, 0.411), rgba(128, 0, 255, 0.291)); /* Degradado con transparencia */
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Hace que sea un círculo */
+    background: linear-gradient(45deg, rgba(255, 107, 107, 0.411), rgba(128, 0, 255, 0.291)); /* Degradado con transparencia */
+  }
+
+  .shape {
+    width: 100px;
+    height: 100px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+  }
+  

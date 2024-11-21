@@ -2,7 +2,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #4285f4; /* Azul Google */
+  background-color: #8942f4; /* Azul Google */
   color: white;
   border: none;
   border-radius: 25px;
@@ -14,5 +14,5 @@ button {
 }
 
 button:hover {
-  background-color: #357ae8;
+  background-color: #7435e8;
 }
